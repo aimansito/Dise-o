@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 6</title>
+</head>
+<body>
+    <main>
+        <h3>Reserva de cita</h3>
+        <form action="index.html" method="post">
+            <label for="nom" >Nombre:</label>
+            <input type="text" id="nom" required autofocus/>
+            <label for="ap1">Apellidos:</label>
+            <input type="text" id="ap1" required autofocus/>
+            <label for="pais">
+                <select id="pais" required>
+                    <option value="+34">España (+34)</option>
+                    <option value="+1">Estados Unidos (+1)</option>
+                    <option value="+52">México (+52)</option>
+                </select>
+            </label>
+            <input type="tel" id="phone-number" placeholder="Número de teléfono" required />
+        </form>
+    </main>
+</body>
+</html>

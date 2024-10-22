@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 5</title>
+    <style>
+        input:invalid {
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Iniciar Sesión</h2>
+    <main>
+        <form action="index.html" method="post">
+            <input type="text" placeholder="Email" aria-label="Introducir un email" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}" maxlength="50" required autofocus/>
+            <input type="pass" placeholder="Contraseña" aria-label="Introducir una contraseña" minlength="8" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}" required autofocus/>
+            <label for=""><a href="#">Recuperar contraseña</a></label>
+            <button type="submit">Iniciar Sesión</button>
+        </form>
+    </main>
+</body>
+</html>
