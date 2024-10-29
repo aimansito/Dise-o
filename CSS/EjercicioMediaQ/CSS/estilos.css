@@ -1,0 +1,67 @@
+   /* Estilos generales */
+   body {
+       font-family: Arial, sans-serif;
+       margin: 0;
+       padding: 0;
+   }
+
+   nav {
+       background-color: #1E90FF;
+       padding: 10px 0;
+   }
+
+   /* Flexbox para el menú de navegación - estilo general */
+   nav ul {
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       list-style: none;
+       padding: 0;
+       margin: 0;
+   }
+
+   nav ul li {
+       margin: 10px 0;
+   }
+
+   nav ul li a {
+       color: white;
+       text-decoration: none;
+       padding: 10px 15px;
+       display: block;
+   }
+
+   nav ul li a:hover {
+       background-color: #555;
+       border-radius: 5px;
+   }
+
+   /* Estilos para pantallas de móviles (por defecto) */
+   /* Móvil: ya definido arriba con flex-direction: column */
+
+   /* Adaptación para pantallas de tablet */
+   @media (min-width: 600px) and (max-width: 1023px) {
+       nav ul {
+           flex-direction: row;
+           /* Cambia a fila en tablet */
+           justify-content: center;
+       }
+
+       nav ul li {
+           margin: 0 15px;
+       }
+   }
+
+   /* Estilos para pantallas de escritorio */
+   @media (min-width: 1024px) {
+       nav ul {
+           flex-direction: row;
+           justify-content: flex-end;
+           /* Alinea a la derecha en escritorio */
+           padding-right: 50px;
+       }
+
+       nav ul li {
+           margin: 0 15px;
+       }
+   }
