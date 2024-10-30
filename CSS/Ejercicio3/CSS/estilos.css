@@ -1,0 +1,95 @@
+   /* Estilos básicos */
+   * {
+       margin: 0;
+       padding: 0;
+       box-sizing: border-box;
+   }
+
+   body {
+       font-family: Arial, sans-serif;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       height: 100vh;
+       background-color: #f4f4f4;
+   }
+
+   #contenido {
+       display: flex;
+       flex-direction: column;
+       width: 90%;
+       max-width: 800px;
+       background-color: #e0e0e0;
+   }
+
+   header,
+   nav,
+   article,
+   aside,
+   footer {
+       padding: 20px;
+       text-align: center;
+       color: white;
+       font-weight: bold;
+       border: 2px solid rgb(190, 190, 190);
+   }
+
+   header {
+       background-color: #4da8da;
+   }
+
+   nav {
+       background-color: #f0a500;
+   }
+
+   article {
+       background-color: #6a1b9a;
+       flex-grow: 2;
+   }
+
+   aside {
+       background-color: #b2ebf2;
+       flex-grow: 1;
+   }
+
+   footer {
+       background-color: #4da8da;
+   }
+
+   /* Breakpoint para pantallas de 768px o más */
+   @media (min-width: 768px) {
+       #contenido {
+           flex-direction: column;
+           /* Disposición en columna */
+       }
+
+       header {
+           order: 1;
+       }
+
+       nav {
+           order: 2;
+           flex: 1;
+       }
+
+       main {
+           display: flex;
+           flex-direction: row;
+           /* Artículo y Aside en fila */
+           order: 3;
+       }
+
+       article {
+           flex: 2;
+           order: 4;
+       }
+
+       aside {
+           flex: 1;
+           order: 5;
+       }
+
+       footer {
+           order: 6;
+       }
+   }
