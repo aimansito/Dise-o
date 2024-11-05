@@ -1,15 +1,67 @@
-*{
+/* Aplica box-sizing para incluir padding y borde en el tamaño total del elemento */
+* {
     box-sizing: border-box;
 }
-body{
-    margin: 0;
-    padding: 0;
+
+/* Estilos para el contenedor principal */
+main {
+    display: flex;                 /* Usa Flexbox para organizar elementos dentro de main */
+    flex-direction: column;        /* Coloca los elementos en una columna */
+    align-items: center;           /* Centra los elementos horizontalmente */
 }
-h1{
-    display: grid;
-    place-content: center;
+
+/* Estilos para el artículo de oferta */
+article.item-oferta {
+    padding: 1rem;                 /* Añade espacio interior */
+    border: solid black 1px;       /* Aplica borde sólido negro */
+    border-radius: 20px;           /* Bordes redondeados */
+    display: flex;                 /* Activa Flexbox dentro del artículo */
+    flex: 100%;                    /* Ocupa el 100% del espacio disponible */
 }
-#ofertas{
-    display:flex;
-    place-content: center;
+
+/* Estilos para el título h3 */
+h3 {
+    order: -1;                     /* Mueve el título al inicio dentro del contenedor Flex */
+    text-align: center;            /* Centra el texto del título */
+}
+
+/* Estilos para el encabezado */
+header {
+    display: grid;                 /* Usa Grid layout */
+    place-content: center;         /* Centra el contenido en ambas direcciones */
+}
+
+/* Estilos para las imágenes */
+img {
+    order: -1;                     /* Mueve la imagen al inicio en el orden de Flexbox */
+    height: auto;                  /* Ajusta la altura automáticamente para mantener proporción */
+    width: 100%;                   /* La imagen ocupa el 100% del contenedor */
+}
+
+/* Estilos para el botón */
+button {
+    background-color: rgb(255,157,0); /* Fondo naranja */
+    margin-top: auto;               /* Empuja el botón hacia la parte inferior */
+    align-self: center;             /* Centra el botón horizontalmente */
+    padding: .75em;                 /* Espacio interno alrededor del texto */
+    color: white;                   /* Color del texto en blanco */
+    font-weight: bold;              /* Texto en negrita */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.882); /* Sombra con efecto de profundidad */
+}
+
+/* Cambia el color de fondo del botón al pasar el cursor */
+button:hover {
+    background-color: red;
+}
+
+/* Media query para pantallas de al menos 1020px de ancho */
+@media(min-width:1020px) {
+    section {
+        display: flex;               /* Aplica Flexbox al contenedor de secciones */
+        flex-direction: row;         /* Coloca las secciones en una fila */
+        justify-content: space-around; /* Distribuye el espacio entre los elementos */
+    }
+    main {
+        align-items: flex-start;     /* Alinea los elementos al inicio en pantallas anchas */
+    }
 }
