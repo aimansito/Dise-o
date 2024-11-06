@@ -109,11 +109,8 @@
     font-size: 30px;
   }
   
-  
-  
-  
-                                                          /*CAMBIOS*/
-  /*Verison de Móvil*/
+  /*CAMBIOS*/
+  /*Version de Móvil*/
   h2, h3 {
     text-align: center;
   }
@@ -162,7 +159,7 @@
     section#principal {
       display: flex;
       flex-direction: row;
-      flex-wrap: wrap;/*Para que se mueva debahjo*/
+      flex-wrap: wrap;/*Para que se mueva debajo*/
     }
   
     h3 {
