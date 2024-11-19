@@ -1,0 +1,88 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+#menu{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+.desplegar{
+    width: 0.8rem;
+    height: 0.8rem;
+}
+#menu span img{
+    width: 2rem;
+    height: 2rem;
+    margin-left: 0;
+}
+span.cerrar{
+    margin-left: auto;
+}
+#menu h2{
+    text-align: center;
+}
+#menu > nav#main-menu > img{
+    width: 2rem;
+    height: 2rem;
+}
+#menu  nav#social-menu  img{
+    width: 2rem;
+    height: 2rem;
+}
+#idioma-menu ul{
+    display: flex;
+    flex-direction: row;
+    padding: 1rem;
+}
+#idioma-menu ul li {
+    list-style: none;
+    padding: 0.5rem;
+}
+#idioma-menu ul li a{
+    text-decoration: none;
+    color: black;
+    justify-content: space-between;
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+    padding: 0.3rem;
+}
+#idioma-menu ul img{
+    width: 2rem;
+    height: 2rem;
+    margin-right: 0.3rem;
+}
+#idioma-menu .desplegar{
+    width: 0.8rem;
+    height: 0.8rem;
+}
+nav#main-menu li{
+    padding: 0.5rem;
+}
+nav#main-menu li a{
+    text-decoration: none;
+    color: black ;
+}
+nav#social-menu ul{
+    display: flex;
+    flex-direction: row;
+    padding-top: 1rem;
+}
+nav#social-menu li a{
+    text-decoration: none;
+    padding: 1rem;
+}
+nav#social-menu li {
+    list-style: none;
+}
+#main-menu ul li ul li {
+    display: none;
+}
+#main-menu ul :hover > ul li {
+    display: flex;
+}
+#social-menu {
+    padding-bottom: 0.5rem;
+}
