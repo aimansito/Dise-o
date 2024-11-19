@@ -7,11 +7,13 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
+    padding: 1rem;
 }
 .desplegar{
     width: 0.8rem;
     height: 0.8rem;
 }
+
 #menu span img{
     width: 2rem;
     height: 2rem;
@@ -32,9 +34,12 @@ span.cerrar{
     height: 2rem;
 }
 #idioma-menu ul{
-    display: flex;
+    display: none;
     flex-direction: row;
-    padding: 1rem;
+
+}
+#idioma-menu:hover ul{
+    display: flex;
 }
 #idioma-menu ul li {
     list-style: none;
@@ -48,6 +53,7 @@ span.cerrar{
     display: flex;
     align-items: center;
     padding: 0.3rem;
+
 }
 #idioma-menu ul img{
     width: 2rem;
@@ -60,6 +66,7 @@ span.cerrar{
 }
 nav#main-menu li{
     padding: 0.5rem;
+    list-style: none;
 }
 nav#main-menu li a{
     text-decoration: none;

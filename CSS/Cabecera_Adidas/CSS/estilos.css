@@ -103,7 +103,72 @@ header > div:nth-child(3){
 }
 header > div:nth-child(3) a{
     color: rgb(224, 224, 224);
-}
-@media(min-width: 1024px){
 
+}
+@media (min-width: 1024px) {
+  header {
+     flex-flow: row wrap;
+     align-items: center;
+  }
+  header > p{
+    flex: 1 100%;
+    justify-content: center;
+  }
+  header > div:nth-child(2){
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+  }
+  header > div:nth-child(2) > svg:nth-child(1){
+    order: 1;
+    margin-right: 10rem;
+    margin-left: 0rem;
+  }
+  header > div:nth-child(2) > nav#main-menu{
+    display: flex;
+    order: 2;
+    margin-left: 0rem;
+  }
+  header > div:nth-child(2) > nav#main-menu > ul{
+    display: flex;
+    gap: 1rem;
+  }
+  header > div:nth-child(2) > nav#main-menu > label, 
+  header > div:nth-child(2) > nav#main-menu > input{
+    display: none;
+  }
+  header > div:nth-child(2) > div#buscador{
+    display: flex;
+    align-items: center;
+    order: 3;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+  header > div:nth-child(2) > div#buscador > input {
+    display: inline;
+    width: 9rem;
+    margin-right: 0.5rem;
+    padding: 0.3rem;
+    background: #eceff1;
+    border: 0px;
+  }
+  header > div:nth-child(2) > svg#usuario{
+    order: 4;
+    margin: 0 0.5rem;
+  }
+  header > div:nth-child(2) > svg#corazon{
+    order: 5;
+    margin: 0 0.5rem;
+  }
+  header > div:nth-child(2) > svg#carro{
+    order: 6;
+    margin: 0 0.5rem;
+  }
+  header > div:nth-child(3){
+    flex: 1 100%;
+    padding: 1rem;
+  }
+  header > div:nth-child(3) > a{
+   color: black;
+  }
 }
