@@ -1,0 +1,90 @@
+*{box-sizing: border-box; padding: 0; margin: 0;}
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5rem 1rem .5rem 1rem;
+} 
+header > nav#menuprincipal{
+    order: 1;
+    padding: .5rem;
+}
+
+header > nav#buscador{
+    order: 2;
+    padding: .5rem;
+    margin-left: 1rem;
+    text-align:center;   
+}
+header > picture{
+    order: 3;
+    flex-grow: 1.5;
+    text-align: center;
+}
+header > picture > img{height: 2rem;}
+header > nav#compra{
+    order: 4;
+    padding: .5rem;
+}
+header > nav#buscador > ul > li,header > nav#compra > ul > li {list-style: none;}
+header > nav#buscador > ul > li > a{color: black;}
+
+header > nav#compra > ul > li > a{color: black;}
+header > nav#menu-principal{
+    display: flex;
+    flex-direction: row;
+    padding: .5rem;
+}
+header > nav#menu-principal > input{display:none ;}
+ul#menu{display: none;}
+header > nav#menu-principal > input#menu-hamburger:checked + ul#menu{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 1rem;
+    position: absolute;
+    top: 4rem;
+    list-style: none;
+}
+ul#menu > li > a{
+    color: black;
+    text-decoration: none;
+}
+main{
+    display: flex;
+    flex-flow: row wrap;
+    flex: 100%;
+}
+main > article.item{
+    display: flex;
+    flex-direction: column;
+    flex: 0 49%; 
+    text-align: center;
+}
+main > article.item > :nth-child(3){ order: -1; }
+main > article.item > a{
+    color: black;
+    text-decoration: none;
+}
+main  img{
+    height: auto;
+    width: 100%;
+}
+footer{padding: .5rem;}
+footer > nav > ul > li {list-style: none;}
+footer > nav > ul > li > a{
+    text-decoration: none;
+    color: black;
+}
+footer > nav#menu-adicional > ul > li{
+    border-bottom: solid grey 1px;
+    padding: 5px;
+    font-size: 10px;
+}
+footer > nav#iconos-sociales > ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+footer > nav#iconos-sociales > ul > li{ padding: .5rem;}
