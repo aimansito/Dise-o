@@ -1,0 +1,101 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: lightblue;
+    height: 100%;
+    overflow: hidden;
+}
+
+input#hamburger {
+    display: none; 
+}
+
+label.menu-toogle {
+    display: flex;
+    position: absolute;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 5%;
+    background-color: #464545;
+    cursor: pointer;
+    top: 0.5rem;
+    left: 0;
+    margin: 0.5rem;
+    justify-content: center;
+    align-items: center;
+    transition: left 0.5s ease-out;
+    z-index: 1001; 
+}
+
+label.menu-toogle img {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+nav.main-menu {
+    position: fixed;
+    background-color: #272727;
+    top: 0;
+    left: -10rem; 
+    height: 100vh;
+    width: 10rem;
+    transition: left 0.5s ease-out;
+}
+
+input#hamburger:checked ~ nav.main-menu {
+    left: 0;
+}
+
+input#hamburger:checked ~ label.menu-toogle {
+    left: 10rem; /* Mueve el ícono junto con el menú */
+}
+
+nav.main-menu > a.current {
+    border-top: 1px solid white;
+}
+
+nav.main-menu > a.item-menu {
+    display: block;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100%;
+    margin: 0 auto;
+    padding: 1rem;
+    border-bottom: 1px solid grey;
+    font-family: sans-serif;
+}
+
+nav.main-menu > a.item-menu:hover {
+    background: white;
+    color: grey;
+}
+
+main.main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    left: 0; /* Por defecto, el contenido principal está en su lugar */
+    transition: left 0.5s ease-out; /* Suaviza el movimiento del contenido */
+}
+
+input#hamburger:checked ~ main.main-container {
+    left: 10rem; /* Mueve el contenido hacia la derecha al abrir el menú */
+}
+
+main.main-container h1 {
+    font-family: "Anton", sans-serif;
+    font-size: 2rem;
+    color: #333;
+}
