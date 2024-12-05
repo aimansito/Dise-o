@@ -1,0 +1,29 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none
+}
+header{
+    display: flex;
+    flex-direction: row;
+}
+header nav#menu-principal{
+    order: 1;
+}
+header a picture{
+    order: 3;
+}
+header nav#buscador-newsletter{
+    order: 2;
+}
+header nav#registro{
+   
+}header nav#compra{
+    order: 4;
+}

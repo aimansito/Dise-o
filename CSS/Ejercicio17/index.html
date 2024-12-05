@@ -1,49 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./CSS/estilos.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./CSS/estilos.css" />
     <title>Formulario Animado</title>
-</head>
-<body>
-        <img src="./img/amazon.png" alt="Amazon">
-        <h2>Crear cuenta</h2>
-        <form action="#" method="post">
-            <span class="form">
-                <input type="text" name="nom" id="nom" required>
-                <label for="nom" class="lbl-nombre">
-                    <span class="text-nomb">Nombre</span>
-                </label>
+  </head>
+  <body>
+    <main>
+        <div class="tooltip">
+            Crear cuenta
+            <span class="tooltiptext">Complete el formulario para continuar</span>
+        </div>
+      <form action="#" method="post" class="form-container">
+        <!-- Nombre -->
+        <div class="form-group">
+          <input type="text" name="nom" id="nom" class="form-input" required />
+          <label for="nom" class="form-label">
+            <span class="label-text">Nombre</span>
+          </label>
+        </div>
+
+        <!-- Correo -->
+        <div class="form-group">
+          <input
+            type="email"
+            name="correo"
+            id="correo"
+            class="form-input"
+            required
+          />
+          <label for="correo" class="form-label">
+            <span class="label-text">
+              Correo electrónico
             </span>
-            
-           <span class="form">
-            <input type="email" name="correo" id="correo" required>
-            <label for="correo" class="lbl-nombre">
-                <span class="text-nomb">
-                    Número de móvil o dirección de correo electrónico
-                </span>
-            </label>
-           </span>    
-           <span class="form">
-            <input type="password" name="pass" id="pass" required>
-            <label for="pass" class="lbl-nombre">
-                <span class="text-nomb">
-                    Contraseña
-                </span>
-            </label>
-           </span>
-            
-            <span class="form">
-            <input type="password" name="pass2" id="pass2" required>
-            <label for="pass2" class="lbl-nombre">
-                <span class="text-nomb">
-                    Confirma tu contraseña
-                </span>
-            </label>
-            </span>
-            
-            <input type="submit" value="Continuar">
-        </form>
-</body>
+          </label>
+        </div>
+
+        <!-- Contraseña -->
+        <div class="form-group">
+          <input
+            type="password"
+            name="pass"
+            id="pass"
+            class="form-input"
+            required
+          />
+          <label for="pass" class="form-label">
+            <span class="label-text">Contraseña</span>
+          </label>
+        </div>
+
+        <!-- Confirmar Contraseña -->
+        <div class="form-group">
+          <input
+            type="password"
+            name="pass2"
+            id="pass2"
+            class="form-input"
+            required
+          />
+          <label for="pass2" class="form-label">
+            <span class="label-text">Confirma tu contraseña</span>
+          </label>
+        </div>
+
+        <!-- Botón de envío -->
+        <input type="submit" value="Continuar" class="form-submit" />
+      </form>
+    </main>
+  </body>
 </html>

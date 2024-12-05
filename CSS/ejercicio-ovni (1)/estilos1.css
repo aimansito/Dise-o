@@ -1,0 +1,24 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    font-size: 16px;
+}
+section#news{
+    display: flex;
+    flex-flow: column;
+}
+section#news > h1{
+    font-family: 'Anton', sans-serif;
+    text-align: center;
+    font-size: 3rem;
+}
+section#news > article{
+    display: flex;
+    flex-flow: column;
+    margin: 1rem;
+}
+section#news > article > img{
+    width: 100%;
+    height: auto;
+}

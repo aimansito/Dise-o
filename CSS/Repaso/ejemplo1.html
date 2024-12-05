@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            background-color: #686868;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 1.25rem;
+        }
+        ul {
+            padding: 0;
+            list-style-type: none;
+        }
+        ul.menu {
+            background-color: #ACACAC;
+            border: 1px solid #fff;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-evenly;
+            height: 200px; /* Define una altura explícita */
+        }
+        ul.menu > li {
+            background-color: #C9830A;
+            margin: 0.62rem;
+            border: 1px solid #FFF;
+            padding: 0.62rem;
+        }
+        ul.menu > li:nth-child(1) {
+            background-color: red;
+            align-self: flex-start; /* Alineación arriba */
+        }
+        ul.menu > li:nth-child(2) {
+            background-color: red;
+            align-self: center; /* Centrado verticalmente */
+        }
+        ul.menu > li:nth-child(3) {
+            background-color: red;
+            align-self: flex-end; /* Alineación abajo */
+        }
+        ul.menu > li:nth-child(4) {
+            align-self: stretch; /* Se estira para ocupar todo el espacio vertical */
+            order: -1;
+        }
+    </style>
+</head>
+<body>
+    <ul class="menu">
+        <li><a href="#">Item 1</a></li>
+        <li><a href="#">Item 2</a></li>
+        <li><a href="#">Item 3</a></li>
+        <li><a href="#">Item 4</a></li>
+    </ul>
+</body>
+</html>
