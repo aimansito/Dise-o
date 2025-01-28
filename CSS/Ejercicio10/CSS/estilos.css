@@ -11,7 +11,7 @@ main{
     display: flex;
     flex-direction: column;
     padding: 1rem;
-    flex-wrap: wrap;
+    align-items: center;
 }
 main h2{
     text-align: center;
@@ -20,8 +20,8 @@ main h2{
 }
 form{
     display: flex;
-    flex-wrap: wrap;
     flex-direction: column;
+    row-gap: 0.2rem;
 }
 form label{
     font-size: 1rem;   
@@ -36,4 +36,5 @@ form input[type="submit"]{
     background-color: black;
     color: white;
     padding: 0.8rem;
+    align-self: center;
 }
