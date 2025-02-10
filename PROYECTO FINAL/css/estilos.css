@@ -1,0 +1,117 @@
+* {
+    box-sizing: border-box;
+  }
+  body {
+    font-family: 'Anton';
+    margin: 0;
+    padding: 0;
+    background-image: url('../img/bodyBack.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+  header {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    background-image: url('../img/header.png');
+    border-bottom: 1px solid #cc941a;
+  }
+  a {
+    text-decoration: none;
+    color: white;
+  }
+  ul li {
+    list-style: none;
+  }
+  .logo-index {
+    height: 5rem;
+    width: 5rem;
+    padding: 0.5rem;
+  }
+  header nav#menu-principal label {
+    padding: 0.5rem;
+  }
+  header nav#menu-principal label img {
+    height: 2rem;
+    width: 2rem;
+  }
+  header nav#menu-usuario label {
+    padding: 0.5rem;
+  }
+  header nav#menu-usuario label img {
+    height: 2rem;
+    width: 2rem;
+  }
+  header nav#menu-principal input,
+  header nav#menu-usuario input,
+  header nav#menu-principal ul#menu,
+  header nav#menu-usuario ul#menu-user {
+    display: none;
+  }
+  
+  header nav#menu-principal input:checked ~ ul#menu {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    top: auto;
+    left: 0;
+    right: 0;
+    position: absolute;
+    flex-basis: 80%;
+    background-color: rgb(43, 41, 41);
+    opacity: 0.8;
+  }
+  
+  header nav#menu-usuario input:checked ~ ul#menu-user {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    top: auto;
+    left: 0;
+    right: 0;
+    position: absolute;
+    flex-basis: 80%;
+    background-color: rgb(43, 41, 41);
+    opacity: 0.8;
+  }
+  main{
+    margin-top: 1rem;
+  }
+  .barra-busqueda {
+    display: flex;
+    align-items: center;     
+    padding: 0.4rem 0.6rem;        
+    border: 2px solid #ccc;    
+    border-radius: 20px;        
+    background-color: #cc941a;    
+    width: 22rem;               
+    font-family: 'Audiowide';
+    margin: 0 auto;
+}
+  
+  .barra-busqueda img {
+    width: 2rem;               
+    height: 1.6rem;
+    margin-right: 10px;        
+  }
+  
+  #buscar {
+    width: 100%;                
+    padding: 0.5rem;             
+    font-size: 1rem;           
+    border: none;               
+    outline: none;              
+    background: transparent;   
+  }
+  
+  #buscar:focus {
+    border-color: #007BFF;     
+  }
+  
+  input::placeholder{
+    font-family: 'Audiowide';
+    color: white;
+  }
