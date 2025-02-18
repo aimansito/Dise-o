@@ -1,40 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/estilos.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Audiowide&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/estilos.css" />
     <title>Inicio</title>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <nav id="menu-principal">
-            <label for="hamburger">
-                <img src="img/icons8-menu.svg" alt="imagen menu">
-            </label>
-            <input type="checkbox" id="hamburger">
-            <ul id="menu"> 
-				<li><a href="#">INICIO</a></li>
-				<li><a href="#">SERVICIOS</a></li>
-				<li><a href="#">GYM</a></li>
-				<li><a href="#">WORKOUT</a></li>
-				<li><a href="#">CONTACTO</a></li>
-			</ul>
-        </nav>
-        <a href="index.html">
-            <picture><img src="./img/uf.png" alt="logoINDEX"></picture>
-        </a>
-        <nav id="menu-usuario">
-            <label for="userHamburger">
-                <img src="img/user.svg" alt="imagen menu">
-            </label>
-            <input type="checkbox" id="userHamburger">
-            <ul id="menu-user"> 
-				<li><a href="#">INICIAR SESIÓN</a></li>
-				<li><a href="#">CREAR CUENTA</a></li>
-				<li><a href="#">CERRAR SESIÓN</a></li>
-			</ul>
-        </nav>
+      <nav id="menu-principal">
+        <label for="hamburger">
+          <img src="img/menu.svg" alt="imagen menu" />
+        </label>
+        <input type="checkbox" id="hamburger" />
+        <ul id="menu">
+          <li><a href="#">INICIO</a></li>
+          <li><a href="#">SERVICIOS</a></li>
+          <li><a href="#">GYM</a></li>
+          <li><a href="#">WORKOUT</a></li>
+          <li><a href="#">CONTACTO</a></li>
+        </ul>
+      </nav>
+      <a href="index.html">
+        <picture
+          ><img class="logo-index" src="./img/uf.png" alt="logoINDEX"
+        /></picture>
+      </a>
+      <nav id="menu-usuario">
+        <label for="userHamburger">
+          <img src="img/user.svg" alt="imagen menu" />
+        </label>
+        <input type="checkbox" id="userHamburger" />
+        <ul id="menu-user">
+          <li><a href="#">INICIAR SESIÓN</a></li>
+          <li><a href="#">CREAR CUENTA</a></li>
+          <li><a href="#">CERRAR SESIÓN</a></li>
+        </ul>
+      </nav>
     </header>
-</body>
+    <main>
+      <div class="barra-busqueda">
+        <img src="./img/search.svg" alt="search" />
+        <input type="text" id="buscar" placeholder="Buscar..." />
+      </div>
+      <section id="imagenes">
+        <article id="imagen">
+
+        </article>
+      </section>
+    </main>
+    <footer>
+        
+    </footer>
+  </body>
 </html>
