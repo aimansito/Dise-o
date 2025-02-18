@@ -1,0 +1,18 @@
+/*
+$(function () {
+    $(" article > img").on("mouseenter", function () {
+        $(this).siblings(" h3 ").toggle();
+    });
+    $(" article > img").on("mouseleave", function () {
+        $(this).siblings(" h3 ").toggle();
+    });
+});
+*/
+$(function(){
+    $("article.noticia img").on("click", function(){
+        $(this).next().css("display","block");
+    })
+    $("article.noticia img").on("dblclick", function() {
+        $(this).next().css("display","none");
+    })
+})
