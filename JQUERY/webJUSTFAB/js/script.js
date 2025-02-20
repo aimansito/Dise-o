@@ -45,42 +45,54 @@ $(function () {
         }
     });
 });
-// apartado 4 
+// apartado 4
 $(function () {
-    let menu = $("#menu");
-    let submenus = $("#menu li ul"); 
-    let arrows = $("#menu > li > a i");
+    $("#menu > li > a").on("click", function(event) {
+        event.preventDefault(); // Evita el comportamiento predeterminado
 
-    menu.hide();
-    submenus.hide();
+        let submenu = $(this).next("ul"); // Obtiene el submenú
 
-    $("#menu-principal > span").on("click", function () {
-        if (!menu.is(":animated")) {
-            menu.stop(true, true).slideToggle(300);
+        if (submenu.length) {
+            // Cierra otros submenús que no son el actual
+            $("#menu li > ul").not(submenu).stop(true, true).slideUp();
+            // Alterna el submenú actual
+            submenu.stop(true, true).slideToggle();
+
+            let icono = $(this).find("i"); // Obtiene el ícono de la flecha
+            // Restablece los íconos de otros enlaces
+            $("#menu li > a i").not(icono).removeClass("fa-angle-up").addClass("fa-angle-down");
+            // Alterna la clase del ícono
+            icono.toggleClass("fa-angle-down fa-angle-up");
         }
     });
 
-    // Controlar apertura de submenús y cambiar flecha
-    $("#menu > li > a").on("click", function (e) {
-        e.preventDefault(); 
-
-        let submenu = $(this).next("ul"); 
-        let arrow = $(this).find("i"); 
-
-        if (!submenu.is(":animated")) {
-            submenus.not(submenu).slideUp(300); 
-            arrows.not(arrow).removeClass("fa-angle-up").addClass("fa-angle-down"); 
-
-            submenu.stop(true, true).slideToggle(300, function () {
-                if (submenu.is(":visible")) {
-                    arrow.removeClass("fa-angle-down").addClass("fa-angle-up");
-                } else {
-                    arrow.removeClass("fa-angle-up").addClass("fa-angle-down");
-                }
-            });
-        }
+    // Evita que el clic en el submenú cierre el menú
+    $("#menu li ul li a").on("click", function(event) {
+        event.stopPropagation(); // Detiene la propagación del evento
     });
 });
+
+
+//apartado 5
+$(window).on("scroll", function(){
+    if($(this).scrollTop()>100){
+        $("header").css({
+            "position":"fixed",
+            "width": "100%",
+            "top":  "0"
+        });
+    }else{
+        $("header").css({
+            "position":"relative",
+            "opacity":"1"
+        })
+    }
+})
+$(function(){
+    $(window).on("resize",function(){
+        $("#hamburger").prop("checked",false);
+    })
+})
 
 
 // apartado 6

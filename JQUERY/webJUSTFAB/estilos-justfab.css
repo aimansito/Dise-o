@@ -25,6 +25,7 @@ header#top{
 	flex-flow: row wrap;
 	justify-content: space-between;
 	text-align: center;
+	background-color: white;
 }
 header#top > div{
 	order:1;
