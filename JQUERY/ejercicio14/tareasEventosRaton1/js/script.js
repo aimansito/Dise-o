@@ -8,37 +8,42 @@ $(function () {
     });
 });
 */
-$(function(){
-    $(document).on("keydown",
-        function(event){
-            event.preventDefault();
-            if(event.key==="a"){
-                $("article.noticia h3").toggle();
-            }
-        }
-    )
-});
-$(function() {
-    // Mostrar mensaje con efecto de persiana
-    function mostrarMensaje(texto) {
-        $("#mensaje").text(texto).slideDown(400).delay(2000).slideUp(400); // Efecto de persiana
+$(function () {
+  $(document).on("keydown", function (event) {
+    if (event.key === "a") {
+      $("article.noticia h3").toggle();
     }
-
-    // Manejo del envío del formulario
-    $("#formulario-contacto").on("submit", function(event) {
-        event.preventDefault(); // Previene el envío del formulario
-
-        // Efecto de cambio de color en el botón con fadeTo
-        $("#enviar-btn").fadeTo(300, 0.5).fadeTo(300, 1.0); // Cambia la opacidad
-
-        mostrarMensaje("Formulario enviado con éxito!"); // Muestra el mensaje
-    });
-
-    $("#contacto input").on("focusin", function(){
-        $(this).css("background", "lightblue");
-    });
-
-    $("#contacto input").on("focusout", function(){
-        $(this).css("background", "white");
-    });
+  });
 });
+$(function () {
+    $("#enviar-btn").on("mouseenter", function () {
+      $(this).fadeTo("fast", 0.7);
+    });
+  
+    $("#enviar-btn").on("mouseleave", function () {
+      $(this).fadeTo("fast", 1);
+    });
+  
+    $("#enviar-btn").on("click", function (event) {
+      event.preventDefault();
+      let email = $("#email");
+      let mensaje = $("#mensaje");
+  
+      if (email === "") {
+        mensaje.text("Ingresa un correo válido.");
+      } else {
+        mensaje.text("Formulario enviado.");
+      }
+  
+      mensaje.slideDown().delay(3000).slideUp();
+    });
+  
+    $("#contacto input").on("focusin", function () {
+      $(this).css("background", "lightblue");
+    });
+  
+    $("#contacto input").on("focusout", function () {
+      $(this).css("background", "white");
+    });
+  });
+  

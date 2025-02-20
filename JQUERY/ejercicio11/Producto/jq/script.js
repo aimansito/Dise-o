@@ -1,4 +1,5 @@
 $(function () {
+    
     $("section > div > div").on("click", function () {
         let texto = $(this).parent().next(".texto");
 

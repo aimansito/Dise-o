@@ -1,14 +1,22 @@
-// apartado 1 
-$(window).on('scroll', function () {
-    if ($(this).scrollTop() > 300) { // Aparece después de hacer scroll 300px
-        $('#volverarriba').fadeIn();
-    } else {
-        $('#volverarriba').fadeOut();
-    }
+// apartado 1
+$(function () {
+    let $volverArriba = $("#volverarriba");
+
+    $volverArriba.hide();
+
+    $(window).on("scroll", function () {
+        if ($(this).scrollTop() > 100) { // Aparece después de hacer scroll 100px
+            $volverArriba.stop(true, true).fadeIn();
+        } else {
+            $volverArriba.stop(true, true).fadeOut();
+        }
+    });
+
+    $volverArriba.on("click", function () {
+        $("html, body").stop().animate({ scrollTop: 0 }, 500);
+    });
 });
-$('#volverarriba').on('click', function () {
-    $('html, body').animate({ scrollTop: 0 }, 500);
-});
+
 // apartado 2
 $(function () {
     let menu = $("#menu");
@@ -46,30 +54,21 @@ $(function () {
     });
 });
 // apartado 4
-$(function () {
-    $("#menu > li > a").on("click", function(event) {
-        event.preventDefault(); // Evita el comportamiento predeterminado
+$("#menu li > a").on("click", function (event) {
+    event.preventDefault();
+    event.stopPropagation();
 
-        let submenu = $(this).next("ul"); // Obtiene el submenú
+    let submenu = $(this).next("ul");
 
-        if (submenu.length) {
-            // Cierra otros submenús que no son el actual
-            $("#menu li > ul").not(submenu).stop(true, true).slideUp();
-            // Alterna el submenú actual
-            submenu.stop(true, true).slideToggle();
+    if (submenu.length) {
+        $("#menu li > ul").not(submenu).stop().slideUp();
+        $("#menu li > a i").removeClass("fa-angle-up").addClass("fa-angle-down");
 
-            let icono = $(this).find("i"); // Obtiene el ícono de la flecha
-            // Restablece los íconos de otros enlaces
-            $("#menu li > a i").not(icono).removeClass("fa-angle-up").addClass("fa-angle-down");
-            // Alterna la clase del ícono
-            icono.toggleClass("fa-angle-down fa-angle-up");
-        }
-    });
+        submenu.stop().slideToggle();
 
-    // Evita que el clic en el submenú cierre el menú
-    $("#menu li ul li a").on("click", function(event) {
-        event.stopPropagation(); // Detiene la propagación del evento
-    });
+        let icono = $(this).find("i");
+        icono.toggleClass("fa-angle-down fa-angle-up");
+    }
 });
 
 
