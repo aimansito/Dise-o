@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title>EL PAÍS DIW</title>
+	<meta charset="utf-8">
+	<meta content="Escribe tu nombre y apellidos" name="author"/>
+	<meta content="Diseño de Aplicaciones Web" name="description" />
+	<meta content="diseño web, responsive web design" name="keywords" />
+	<meta name="robots" content="index, follow" />
+	<meta name="lang" content="es-ES" />
+	<link rel="icon" href="https://ep01.epimg.net/favicon.png" type="image/png">
+	<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/estilos-elpais.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+	<script src="./jq/jquery-3.7.1.min.js"></script>
+	<script src="./jq/jquery.animate-colors-min.js"></script>
+	<script src="./jq/script.js"></script>
+</head>
+<body>
+	<header>
+		<a href="index.html"><picture><img id="logo" src="img/logo-elpais.png" alt="LOGO" title="HOME"></picture></a>
+		<nav id="menu-principal">
+			<span id="hamburguesa"><i class="fas fa-bars fa-2x"></i></span>
+			<ul id="menu"> 
+				<li><a href="#">INTERNACIONAL<span><i class="fas fa-angle-down"></i></span></a>
+					<ul>
+						<li>EUROPA</li>
+						<li>ESTADOS UNIDOS</li>
+						<li>MÉXICO</li>
+						<li>AMÉRICA LATINA</li>
+						<li>ORIENTE PRÓXIMO</li>
+						<li>ASIA</li>
+						<li>ÁFRICA</li>
+					</ul>
+				</li>
+				<li><a href="#">OPINIÓN<span><i class="fas fa-angle-down"></i></span></a>
+					<ul>
+						<li>EDITORIALES</li>
+						<li>TRIBUNAS</li>
+						<li>VIÑETAS</li>
+					</ul>
+				</li>
+				<li><a href="#">ESPAÑA<span><i class="fas fa-angle-down"></i></span></a>
+					<ul>
+						<li>ANDALUCÍA</li>
+						<li>CATALUÑA</li>
+						<li>C.VALENCIANA</li>
+						<li>GALICIA</li>
+						<li>MADRID</li>
+						<li>MÁS COMUNIDADES</li>
+					</ul>
+				</li>
+				<li><a href="#">ECONOMÍA<span><i class="fas fa-angle-down"></i></span></a>
+					<ul>
+						<li>MERCADOS</li>
+						<li>MIS AHORROS</li>
+						<li>VIVIENDA</li>
+						<li>MIS DERECHOS</li>
+						<li>FORMACIÓN</li>
+						<li>MÁS COMUNIDADES</li>
+					</ul>
+				</li>
+				<li><a href="#">CIENCIA</a></li>
+				<li><a href="#">TECNOLOGÍA <span><i class="fas fa-angle-down"></i></span></a>
+					<ul>
+						<li>MÓVILES</li>
+						<li>REDES SOCIALES</li>
+						<li>BANCO DE PRUEBAS</li>
+						<li>RETINA</li>
+						<li>MERISTATION</li>
+					</ul>
+				</li>
+				<li><a href="#">CULTURA <span><i class="fas fa-angle-down"></i></span></a>
+					<ul>
+						<li>LITERATURA</li>
+						<li>CINE</li>
+						<li>MÚSICA</li>
+						<li>TEATRO</li>
+						<li>DANZA</li>
+						<li>ARTE</li>
+						<li>ARQUITECTURA</li>
+						<li>TOROS</li>
+					</ul>
+				</li>
+				<li><a href="#">GENTE <span><i class="fas fa-angle-down"></i></span></a>
+					<ul>
+						<li>ESTILO</li>
+						<li>VIVA LA VIDA</li>
+						<li>TENDENCIAS</li>
+						<li>HORÓSCOPO</li>
+					</ul>
+				</li>
+				<li><a href="#">ESTILO <span><i class="fas fa-angle-down"></i></span></a>
+					<ul>
+						<li>MODA</li>
+						<li>GASTRONOMÍA</li>
+						<li>GENTE</li>
+					</ul>
+				</li>
+				<li><a href="#">DEPORTES <span><i class="fas fa-angle-down"></i></span></a>
+					<ul>
+						<li>FÚTBOL</li>
+						<li>BALONCESTO</li>
+						<li>TENIS</li>
+						<li>CICLISMO</li>
+						<li>FÓRMULA 1</li>
+						<li>MOTOCICLISMO</li>
+						<li>GOLF</li>
+						<li>OTROS DEPORTES</li>
+					</ul>
+				</li>
+				<li><a href="contacto.html">CONTÁCTANOS<span><i class="fas fa-envelope fa-sm"></i></span></a></li>
+				<li><a href="#">IN ENGLISH</a></li>
+				<li><a href="#">MOTOR</a></li>
+				<li><a href="#">RETINA</a></li>
+				<li><a href="#">CINCO DÍAS</a></li>
+				<li><a href="#">EL PAÍS SEMANAL</a></li>
+				<li><a href="#">BABELIA</a></li>
+				<li><a href="#">EL VIAJERO</a></li>
+			</ul>
+		</nav>
+		<nav id="bloque-iconos">
+			<ul>
+				<li><a href="#"><i class="fas fa-user-circle fa-lg"></i></a></li>
+				<li><a href="#"><i class="fas fa-search fa-lg"></i></a></li>
+			</ul>
+		</nav>
+		<p id="elviajero"><a href="https://elviajero.elpais.com/" title="Ir a El viajero" target="_blank">el viajero</a></p>
+	</header>
+
+
+<!--Contenido principal con el formulario de contacto -->
+	<main>
+		<section id="form-contacto">
+			<h2>FORMULARIO DE CONTACTO</h2>
+			<form id="contacto">
+				<span id="errores"></span>
+				<label for="nombre">Nombre y Apellidos: * </label>
+				<input type="text" id="nombre" name="nombre" placeholder="Nombre y Apellido/s *" title="Inserte su nombre y apellido/s" autofocus pattern="^[A-Za-z]*$" required/>
+				
+				<label for="email">Email: * </label>
+				<input type="text" id="email" name="email" title="Introduzca su correo electrónico" placeholder="Email *" pattern="^[-\w.]+@{1}[-a-z0-9]+[.]{1}[a-z]{2,5}$" required/>
+				
+
+				<label for="telefno">Teléfono: * </label>
+				<input type="text" id="telefno" name="telefno" title="Introduzca su número de móvil" placeholder="Teléfono *" pattern="^\d{9}$" required/>
+				
+
+				<label for="categoria">Categoría: *</label>
+				<select id="categoria" name="categoria">
+					<option value=''>Seleccione una opción...</option>
+					<option value="ped">Pedidos</option>
+					<option value="dev">Devoluciones</option>
+					<option value="tien">Tienda</option>
+				</select>
+			
+				<label for="asunto">Asunto: * </label>
+				<input type="text" id="asunto" name="asunto" title="Introduzca el asunto de su mensaje" placeholder="Asunto *" required/>
+
+				<label for="mensaje">Mensaje: * </label>
+				<span id="caracteres">Máximo 100 caracteres</span>
+				<textarea id="mensaje" name="mensaje" rows="10" cols="30" placeholder="Escriba su mensaje..." title="Escriba su mensaje" maxlength="100" required></textarea>
+				
+				<input type="button" value="Enviar" name="enviar">
+			</form>
+		</section>
+	</main>
+	<footer>
+		<small>(C) EDICIONES EL PAÍS S.L</small>
+	</footer>
+</body>
+</html>

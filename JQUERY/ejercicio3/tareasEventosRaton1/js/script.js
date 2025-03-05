@@ -8,11 +8,11 @@ $(function () {
     });
 });
 */
-$(function(){
-    $("article.noticia img").on("click", function(){
-        $(this).next().css("display","block");
+    $(function(){
+        $("article.noticia img").on("click", function(){
+            $(this).next().css("display","block");
+        })
+        $("article.noticia img").on("dblclick", function() {
+            $(this).next().css("display","none");
+        })
     })
-    $("article.noticia img").on("dblclick", function() {
-        $(this).next().css("display","none");
-    })
-})
