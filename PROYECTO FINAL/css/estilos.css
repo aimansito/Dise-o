@@ -1,8 +1,9 @@
 * {
   box-sizing: border-box;
 }
+
 body {
-  font-family: "Anton";
+  font-family: "Anton", sans-serif;
   margin: 0;
   padding: 0;
   background-image: url("../img/bodyBack.jpg");
@@ -10,41 +11,45 @@ body {
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  color: white;
 }
+
 header {
   display: flex;
   justify-content: space-between;
-  flex-direction: row;
   align-items: center;
   background-image: url("../img/header.png");
   border-bottom: 1px solid #cc941a;
+  padding: 0.5rem 1rem;
 }
+
 a {
   text-decoration: none;
   color: white;
 }
+
 ul li {
   list-style: none;
 }
+
 .logo-index {
   height: 5rem;
   width: 5rem;
   padding: 0.5rem;
 }
-header nav#menu-principal label {
-  padding: 0.5rem;
-}
-header nav#menu-principal label img {
-  height: 2rem;
-  width: 2rem;
-}
+
+header nav#menu-principal label,
 header nav#menu-usuario label {
   padding: 0.5rem;
+  cursor: pointer;
 }
+
+header nav#menu-principal label img,
 header nav#menu-usuario label img {
   height: 2rem;
   width: 2rem;
 }
+
 header nav#menu-principal input,
 header nav#menu-usuario input,
 header nav#menu-principal ul#menu,
@@ -52,34 +57,122 @@ header nav#menu-usuario ul#menu-user {
   display: none;
 }
 
-header nav#menu-principal input:checked ~ ul#menu {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  top: auto;
-  left: 0;
-  right: 0;
-  position: absolute;
-  flex-basis: 80%;
-  background-color: rgb(43, 41, 41);
-  opacity: 0.8;
-}
-
+header nav#menu-principal input:checked ~ ul#menu,
 header nav#menu-usuario input:checked ~ ul#menu-user {
   display: flex;
   flex-direction: column;
   text-align: center;
-  top: auto;
+  position: absolute;
+  top: 5rem;
   left: 0;
   right: 0;
-  position: absolute;
-  flex-basis: 80%;
-  background-color: rgb(43, 41, 41);
-  opacity: 0.8;
+  background-color: rgba(43, 41, 41, 0.9);
+  padding: 1rem;
+  z-index: 1000;
 }
+
 main {
   margin-top: 1rem;
+  padding: 1rem;
 }
+
+.barra-busqueda {
+  display: flex;
+  align-items: center;
+  padding: 0.4rem 0.6rem;
+  border: 2px solid #ccc;
+  border-radius: 20px;
+  background-color: #cc941a;
+  width: 100%;
+  max-width: 22rem;
+  margin: 0 auto;
+}
+
+.barra-busqueda img {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: 0.5rem;
+}
+
+#buscar {
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: white;
+}
+
+#buscar::placeholder {
+  font-family: "Audiowide", sans-serif;
+  color: white;
+}
+
+main section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+main section article#imagen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(43, 41, 41, 0.8);
+  border-radius: 10px;
+  padding: 1rem;
+  width: calc(50% - 0.5rem); /* Dos imágenes por fila */
+  height: 400px; /* Altura fija para todas las cajas */
+  position: relative; /* Para posicionar la imagen correctamente */
+}
+
+main section article#imagen p {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+}
+
+main section article#imagen picture {
+  width: 100%;
+  height: 200px; /* Altura fija para las imágenes */
+  background-position: center;
+  background-size: cover;
+  border-radius: 10px;
+  border: 2px solid #cc941a;
+}
+
+main section article#imagen input[type="button"] {
+  border: none;
+  background-color: #92d1c8;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+main section article#imagen input[type="button"]:hover {
+  background-color: #88c3ba;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: rgba(43, 41, 41, 0.8);
+  margin-top: 2rem;
+}
+
+/* Media query para pantallas pequeñas */
+@media (max-width: 768px) {
+  main section article#imagen {
+    width: calc(50% - 0.5rem); /* Dos imágenes por fila */
+  }
+}
+/*SLIDER*/
+
+
 #slider {
   width: 100%;
   max-width: 800px;
@@ -93,122 +186,7 @@ main {
   height: 100%;
   object-fit: cover;
 }
-.barra-busqueda {
-  display: flex;
-  align-items: center;
-  padding: 0.4rem 0.6rem;
-  border: 2px solid #ccc;
-  border-radius: 20px;
-  background-color: #cc941a;
-  width: 22rem;
-  font-family: "Audiowide";
-  margin: 0 auto;
-}
 
-.barra-busqueda img {
-  width: 2rem;
-  height: 1.6rem;
-  margin-right: 10px;
-}
-
-#buscar {
-  width: 100%;
-  padding: 0.5rem;
-  font-size: 1rem;
-  border: none;
-  outline: none;
-  background: transparent;
-}
-
-#buscar:focus {
-  border-color: #007bff;
-}
-
-input::placeholder {
-  font-family: "Audiowide";
-  color: white;
-}
-
-#tituloSecciones-container {
-  background-color: rgba(204, 148, 26, 0.7);
-  text-align: center;
-  padding: 0.5rem;
-}
-
-#tituloSecciones {
-  color: white;
-  margin: 0;
-}
-
-.clearfix:after {
-  content: "";
-  clear: both;
-  display: block;
-  height: 0;
-  width: 0;
-}
-*/ a {
-  color: #00c5b9;
-  text-decoration: none;
-}
-
-h1 {
-  color: #fff;
-  text-align: center;
-  margin-top: 2rem;
-}
-div#content-sli {
-  padding: 0.25rem 0rem 0.25rem 0rem;
-  width: 100%;
-  background: #242c38;
-}
-
-/*MAIN*/
-
-main section {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-
-main section article#imagen {
-  display: flex;
-  flex-direction: column;
-  flex: 0 50%;
-}
-
-main > article#imagen > * {
-  margin-bottom: 0.5rem;
-}
-
-/*El párrafo con la descripción del artículo va en segundo lugar*/
-
-/*La imagen del artículo aparece en primer lugar*/
-main > article#imagen > picture {
-  order: -1;
-}
-/*Las imágenes de los articulos tienen una anchura relativa*/
-main > article#imagen img {
-  height: auto;
-  width: 100%;
-  border: 2px solid black;
-}
-
-/*El botón lo colocamos en última posición*/
-main > article#imagen > input {
-  border: 0;
-  background-color: #92d1c8;
-  border-radius: 0.2rem;
-  padding: 0.5rem;
-  margin-top: auto;
-  color: white;
-}
-main > article#imagen > input:hover {
-  cursor: pointer;
-  background-color: #88c3ba;
-}
-
-/*SLIDER*/
 .contenedor-slider {
   background: #242c38;
   width: 600px;
