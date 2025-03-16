@@ -2,23 +2,26 @@
   box-sizing: border-box;
 }
 
-body {
+html,body {
   font-family: "Anton", sans-serif;
   margin: 0;
   padding: 0;
-  background-image: url("../img/bodyBack.jpg");
+  background-image: url("../img/bodyBack.webp");
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
   color: white;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-image: url("../img/header.png");
+  background-image: url("../img/contacta.webp");
   border-bottom: 1px solid #cc941a;
   padding: 0.5rem 1rem;
 }
@@ -38,40 +41,96 @@ ul li {
   padding: 0.5rem;
 }
 
-header nav#menu-principal label,
-header nav#menu-usuario label {
+/* MENU */
+/* Estilos generales */
+header nav label {
   padding: 0.5rem;
   cursor: pointer;
 }
 
-header nav#menu-principal label img,
-header nav#menu-usuario label img {
+header nav label img {
   height: 2rem;
   width: 2rem;
 }
 
-header nav#menu-principal input,
-header nav#menu-usuario input,
-header nav#menu-principal ul#menu,
-header nav#menu-usuario ul#menu-user {
+/* Ocultar input */
+header nav input {
   display: none;
 }
 
-header nav#menu-principal input:checked ~ ul#menu,
-header nav#menu-usuario input:checked ~ ul#menu-user {
-  display: flex;
+/* Menú abierto ocupa toda la pantalla */
+#menu,
+#menu-user {
+  display: none;
   flex-direction: column;
-  text-align: center;
-  position: absolute;
-  top: 5rem;
+  justify-content: flex-start; /* Para que la imagen quede arriba */
+  align-items: center;
+  position: fixed;
+  top: 0;
   left: 0;
-  right: 0;
-  background-color: rgba(43, 41, 41, 0.9);
-  padding: 1rem;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(43, 41, 41, 0.95);
   z-index: 1000;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+/* Mostrar menú cuando el input está seleccionado */
+#hamburger:checked ~ #menu,
+#userHamburger:checked ~ #menu-user {
+  display: flex;
+}
+
+/* Imagen dentro del menú */
+.menu-imagen {
+  width: 40%; /* Imagen más pequeña */
+  max-width: 150px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+}
+
+/* Lista del menú */
+#menu ul,
+#menu-user ul {
+  width: 90%;
+  max-width: 400px;
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
+}
+
+/* Estilos de cada opción */
+#menu ul li,
+#menu-user ul li {
+  padding: 1rem 0;
+  font-size: 1.2rem;
+  width: 100%;
+  border-bottom: 1px solid #cc941a;
+}
+
+/* Espacio entre elementos */
+#menu ul li a,
+#menu-user ul li a {
+  text-decoration: none;
+  color: white;
+  display: block;
+  width: 100%;
+}
+
+/* Icono de cerrar */
+.cerrarMenu {
+  font-size: 2rem;
+  color: white;
+  position: absolute;
+  left: 1.5rem;
+  top: 1rem;
+  cursor: pointer;
 }
 
 main {
+  flex: 1 ;
   margin-top: 1rem;
   padding: 1rem;
 }
@@ -114,64 +173,138 @@ main section {
   flex-wrap: wrap;
   gap: 1rem;
   justify-content: center;
+  margin-top: 1rem;
 }
 
+/* Ajustes generales de cada artículo */
 main section article#imagen {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: rgba(43, 41, 41, 0.8);
-  border-radius: 10px;
+  border-radius: 20px;
   padding: 1rem;
-  width: calc(50% - 0.5rem); /* Dos imágenes por fila */
-  height: 400px; /* Altura fija para todas las cajas */
-  position: relative; /* Para posicionar la imagen correctamente */
+  width: calc(45% - 0.5rem); /* Ajusta el ancho de cada artículo */
+  height: 250px; 
+  position: relative;
+  overflow: hidden;
 }
 
-main section article#imagen p {
-  margin: 0.5rem 0;
+main section article#imagen .tituloImagen {
+  position: absolute;
+  top: 3.7rem;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #cc941a;
+  padding: 5px 10px;
   font-size: 1rem;
+  text-align: center;
+  width: 10rem;
+  text-shadow: 
+    2px 2px 3px #000,  
+    -2px -2px 3px #000, 
+    2px -2px 3px #000,  
+    -2px 2px 3px #000;
 }
 
 main section article#imagen picture {
   width: 100%;
-  height: 200px; /* Altura fija para las imágenes */
+  height: 10rem; 
   background-position: center;
   background-size: cover;
-  border-radius: 10px;
+  border-radius: 20px;
   border: 2px solid #cc941a;
+}
+
+main section article#imagen .textoDesc {
+  display: none;
 }
 
 main section article#imagen input[type="button"] {
   border: none;
-  background-color: #92d1c8;
-  border-radius: 5px;
+  background-color: #00aeff;
+  border-radius: 20px;
   padding: 0.5rem 1rem;
   color: white;
   font-size: 1rem;
   cursor: pointer;
-  margin-top: 1rem;
+  margin-top: 0.5rem;
+  font-family: Anton;
 }
 
-main section article#imagen input[type="button"]:hover {
-  background-color: #88c3ba;
-}
-
+/*FOOTER*/
 footer {
+  display: flex;
+  justify-content: center;
   text-align: center;
   padding: 1rem;
-  background-color: rgba(43, 41, 41, 0.8);
+  background-image: url("../img/contacta.webp");
   margin-top: 2rem;
+  border-top: 1px solid #cc941a;
+  font-family: Audiowide;
+}
+.contenedorFooter {
+  display: flex;
+  align-items: center;
+  width: 80%;
+  justify-content: space-between;
+}
+.img-footer img {
+  width: 4rem;
+  height: 4rem;
+}
+.linea {
+  width: 1px;
+  height: 60px;
+  background-color: white;
+  opacity: 0.5;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+.contactoFooter {
+  text-align: center;
+}
+.contactoFooter p{
+  font-size: 0.9rem;
+}
+.iconos-sociales ul {
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+.iconos-sociales li{
+  display: inline-block;
+}
+.iconos-sociales a i {
+  color: #cc941a;
+  font-size: 1.5rem;
+}
+.cookies {
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: bold;
 }
 
-/* Media query para pantallas pequeñas */
-@media (max-width: 768px) {
+@media (min-width: 768px) {
+  main section {
+    flex-wrap: nowrap; /* Evita que los artículos se apilen */
+    justify-content: space-between; /* Espaciado entre elementos */
+  }
+
   main section article#imagen {
-    width: calc(50% - 0.5rem); /* Dos imágenes por fila */
+    width: 22%; /* Cuatro imágenes en una fila */
+    height: 300px; /* Ajusta la altura */
+  }
+
+  /* Mostrar la descripción en tablet y escritorio */
+  main section article#imagen .textoDesc {
+    display: block;
+    font-size: 1rem;
+    margin-top: 1rem;
+    text-align: center;
   }
 }
 /*SLIDER*/
-
 
 #slider {
   width: 100%;
