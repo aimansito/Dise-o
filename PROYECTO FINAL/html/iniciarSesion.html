@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="../font-awesome/css/font-awesome.min.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Audiowide&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/estilos.css" />
+    <title>Ultimate Fitness</title>
+  </head>
+  <body>
+    <header>
+      <nav id="menu-principal">
+        <label for="hamburger">
+          <img src="../img/menu.svg" alt="imagen menu" />
+        </label>
+        <input type="checkbox" id="hamburger" />
+        <div id="menu">
+          <label for="hamburger" class="cerrarMenu">X</label>
+          <img class="menu-imagen" src="../img/uf.png" alt="logoINDEX" />
+          <ul>
+            <li><a href="#">INICIO</a></li>
+            <li><a href="#">SERVICIOS</a></li>
+            <li><a href="#">GYM</a></li>
+            <li><a href="#">WORKOUT</a></li>
+            <li><a href="#">CONTACTO</a></li>
+          </ul>
+        </div>
+      </nav>
+      <a href="../index.html">
+        <img class="logo-index" src="../img/uf.png" alt="logoINDEX" />
+      </a>
+      <nav id="menu-usuario">
+        <label for="userHamburger">
+          <img src="../img/user.svg" alt="imagen menu" />
+        </label>
+        <input type="checkbox" id="userHamburger" />
+        <div id="menu-user">
+          <label for="userHamburger" class="cerrarMenu">X</label>
+          <img class="menu-imagen" src="../img/uf.png" alt="logoINDEX" />
+          <ul>
+            <li><a href="#">INICIAR SESIÓN</a></li>
+            <li><a href="#">CREAR CUENTA</a></li>
+            <li><a href="#">CERRAR SESIÓN</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <!-- Parte principal de la página-->
+    <main>
+      <h2 class="tituloPagina">Iniciar sesión</h2>
+
+      <form action="#" method="POST" class="formularioLogin">
+        <label for="nombre">Nombre de usuario: </label>
+        <input
+          type="text"
+          id="nombre"
+          name="nombre"
+          required
+          autofocus
+          maxlength="25"
+          pattern="^[a-zA-ZáéíóúÁÉÍÓÚñÑüÜ\s]+$"
+          title="Inserte su nombre"
+          placeholder="Escribe tu nombre"
+        />
+        <label for="clave">Contraseña: </label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          required
+          maxlength="25"
+          title="La contraseña debe tener al menos 8 caracteres, incluir una mayúscula, una minúscula, un número y un carácter especial."
+          pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$"
+          placeholder="Escribe tu contraseña"
+        />
+
+        <input type="checkbox" id="recordar" name="recordar" checked>
+        <label for="recordar">Guardar credenciales de sesión</label>
+
+        <input type="submit" value="Reservar" />
+      </form>
+    </main>
+    <footer>
+      <div class="contenedorFooter">
+        <div class="img-footer">
+          <img src="../img/uf.png" alt="logoFooter" />
+        </div>
+
+        <!--Línea divisoria-->
+        <div class="linea"></div>
+
+        <div class="contactoFooter">
+          <p>Contáctanos</p>
+          <nav class="iconos-sociales">
+            <ul>
+              <li>
+                <a href="#"
+                  ><i class="fa fa-instagram" aria-hidden="true"></i
+                ></a>
+              </li>
+              <li>
+                <a href="#"
+                  ><i class="fa fa-facebook-square" aria-hidden="true"></i
+                ></a>
+              </li>
+              <li>
+                <a href="#"
+                  ><i class="fa fa-envelope" aria-hidden="true"></i
+                ></a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="linea"></div>
+
+        <div class="cookies">
+          <p>Política de privacidad y cookies</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

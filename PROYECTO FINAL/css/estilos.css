@@ -42,6 +42,13 @@ ul li {
 }
 
 /* MENU */
+
+.tituloPagina{
+  text-align: center;
+  color: white;
+  background-color: #cc941a;
+}
+
 /* Estilos generales */
 header nav label {
   padding: 0.5rem;
@@ -63,7 +70,7 @@ header nav input {
 #menu-user {
   display: none;
   flex-direction: column;
-  justify-content: flex-start; /* Para que la imagen quede arriba */
+  justify-content: flex-start; 
   align-items: center;
   position: fixed;
   top: 0;
@@ -84,7 +91,7 @@ header nav input {
 
 /* Imagen dentro del menú */
 .menu-imagen {
-  width: 40%; /* Imagen más pequeña */
+  width: 40%; 
   max-width: 150px;
   margin-top: 1rem;
   margin-bottom: 1rem;
@@ -230,6 +237,38 @@ main section article#imagen input[type="button"] {
   margin-top: 0.5rem;
   font-family: Anton;
 }
+/*FORMULARIOS*/
+
+.formularioLogin{
+  margin: 0 auto;
+  width: 18rem;
+  padding: 1rem;
+  align-items: left;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background-color: rgba(28,28,28,255);
+  border-radius:1.5rem ;
+}
+
+.formularioLogin input{
+  width: 15rem;
+  height: 2rem;
+  border-radius: 10rem;
+  margin: 0.5rem;
+
+}
+.formularioLogin input[type="submit"]{
+  background-color:#cc941a ;
+  font-family: Anton;
+}
+.formularioLogin input[type="checkbox"]{
+  width: 1rem;
+  height: 1rem;
+  cursor: pointer;
+}
+
 
 /*FOOTER*/
 footer {
@@ -284,6 +323,7 @@ footer {
   font-size: 0.9rem;
   font-weight: bold;
 }
+
 
 @media (min-width: 768px) {
   main section {
