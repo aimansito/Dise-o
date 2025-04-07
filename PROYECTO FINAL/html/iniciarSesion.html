@@ -64,11 +64,11 @@
     </header>
     <!-- Parte principal de la página-->
     <main>
-      <h2 class="tituloPagina">Iniciar sesión</h2>
+      <h2 class="tituloPagina">INICIAR SESIÓN</h2>
 
       <form action="#" method="POST" class="formularioLogin">
-        <label for="nombre">Nombre de usuario: </label>
-        <input
+        <div class="inputForm">
+          <input
           type="text"
           id="nombre"
           name="nombre"
@@ -79,8 +79,9 @@
           title="Inserte su nombre"
           placeholder="Escribe tu nombre"
         />
-        <label for="clave">Contraseña: </label>
-        <input
+        </div>
+        <div class="inputForm">
+          <input
           type="password"
           id="password"
           name="password"
@@ -90,12 +91,18 @@
           pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$"
           placeholder="Escribe tu contraseña"
         />
+        </div>
 
-        <input type="checkbox" id="recordar" name="recordar" checked>
-        <label for="recordar">Guardar credenciales de sesión</label>
+        <div class="recordarCheckbox">
+          <input type="checkbox" id="recordar" name="recordar" checked>
+          <label for="recordar">Guardar credenciales de sesión</label>
+        </div>
 
-        <input type="submit" value="Reservar" />
+        <input type="submit" value="INICIAR SESIÓN" />
       </form>
+      <p class="textoForm">
+        <span>¿Has olvidado tu contraseña?</span>
+      </p>
     </main>
     <footer>
       <div class="contenedorFooter">

@@ -1,0 +1,34 @@
+:root{
+    --primary: #0795e6;
+    --secondary: #6c757d;
+    --gray-dark: #424950;
+    --gray-light: #443a40;
+    --light: #f8f9fa;
+}
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    font-family: "Noto Sans", serif;
+    font-size: 14px;
+}
+/***** VERSIÓN DE MÓVIL *****/
+
+
+/***** VERSIÓN DE TABLET *****/
+@media (min-width:700px){
+
+}
+
+
+/***** VERSIÓN DE ESCRITORIO *****/
+@media (min-width:1165px){
+    section#sec-vaiana > header#header-vaiana {
+        position: relative;
+    }
+    section#sec-vaiana > header#header-vaiana > h2,
+    section#sec-vaiana > header#header-vaiana > p{
+        position: absolute;
+    }
+}
