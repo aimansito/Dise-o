@@ -16,12 +16,17 @@
       href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"
     />
     <link rel="stylesheet" href="../font-awesome/css/font-awesome.min.css" />
+    <link rel="icon" href="../img/uf.svg" type="image/svg+xml">
+
 
     <link
       href="https://fonts.googleapis.com/css2?family=Anton&family=Audiowide&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../css/estilos.css" />
+    <script src="../jq/jquery-3.7.1.min.js"></script>
+    <script src="../jq/jquery.animate-colors-min.js"></script>
+    <script src="../jq/script.js"></script>
     <title>Ultimate Fitness</title>
   </head>
   <body>
@@ -31,15 +36,16 @@
           <img src="../img/menu.svg" alt="imagen menu" />
         </label>
         <input type="checkbox" id="hamburger" />
+        <div class="linea"></div>
         <div id="menu">
           <label for="hamburger" class="cerrarMenu">X</label>
           <img class="menu-imagen" src="../img/uf.png" alt="logoINDEX" />
           <ul>
-            <li><a href="#">INICIO</a></li>
+            <li><a href="../index.html">INICIO</a></li>
             <li><a href="#">SERVICIOS</a></li>
-            <li><a href="#">GYM</a></li>
-            <li><a href="#">WORKOUT</a></li>
-            <li><a href="#">CONTACTO</a></li>
+            <li><a href="gym.html">GYM</a></li>
+            <li><a href="workout.html">WORKOUT</a></li>
+            <li><a href="contacto.html">CONTACTO</a></li>
           </ul>
         </div>
       </nav>
@@ -52,11 +58,11 @@
         </label>
         <input type="checkbox" id="userHamburger" />
         <div id="menu-user">
-          <label for="userHamburger" class="cerrarMenu">X</label>
+          <label for="userHamburger" class="cerrarMenuUser">X</label>
           <img class="menu-imagen" src="../img/uf.png" alt="logoINDEX" />
           <ul>
-            <li><a href="#">INICIAR SESIÓN</a></li>
-            <li><a href="#">CREAR CUENTA</a></li>
+            <li><a href="../html/iniciarSesion.html">INICIAR SESIÓN</a></li>
+            <li><a href="../html/crearCuenta.html">CREAR CUENTA</a></li>
             <li><a href="#">CERRAR SESIÓN</a></li>
           </ul>
         </div>
@@ -101,14 +107,25 @@
         <input type="submit" value="INICIAR SESIÓN" />
       </form>
       <p class="textoForm">
-        <span>¿Has olvidado tu contraseña?</span>
+        <a href="olvidarContraseña.html">¿Has olvidado tu contraseña?</a>
       </p>
     </main>
     <footer>
       <div class="contenedorFooter">
         <div class="img-footer">
-          <img src="../img/uf.png" alt="logoFooter" />
+          <img src="../img/logo.png" alt="logoFooter" />
         </div>
+
+        <div class="contenedorIdioma">
+          <img src="../img/translate.svg" alt="traductorLogo"><span>ESP</span>
+        </div>
+
+        <div class="contenedorUbicacion">
+          <img src="../img/ubicacion.svg" alt="locationLogo">
+          <img class="bandera" src="../img/bandera.svg" alt="Icono de bandera">
+        </div>
+
+
 
         <!--Línea divisoria-->
         <div class="linea"></div>
@@ -118,29 +135,31 @@
           <nav class="iconos-sociales">
             <ul>
               <li>
-                <a href="#"
-                  ><i class="fa fa-instagram" aria-hidden="true"></i
-                ></a>
+                <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i>
+                <span class="textoIconos">Instagram</span>
+              </a>
               </li>
               <li>
-                <a href="#"
-                  ><i class="fa fa-facebook-square" aria-hidden="true"></i
-                ></a>
+                <a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i>
+                  <span class="textoIconos">Facebook</span>
+                </a>
               </li>
               <li>
-                <a href="#"
-                  ><i class="fa fa-envelope" aria-hidden="true"></i
-                ></a>
+                <a href="#"><i class="fa fa-envelope" aria-hidden="true"></i>
+                  <span class="textoIconos">Correo</span>
+                </a>
               </li>
             </ul>
           </nav>
+          <small>Ultimate Fitness Management ©</small>
         </div>
         <div class="linea"></div>
-
         <div class="cookies">
-          <p>Política de privacidad y cookies</p>
+          <p>
+            <a href="./cookies.html">Política de privacidad y cookies</a>
+          </p>
         </div>
-      </div>
     </footer>
+    <div id="volverarriba"><a href="#top">VOLVER ARRIBA <span><i class="fa fa-sort-asc" aria-hidden="true"></i></span></a></div>
   </body>
 </html>
